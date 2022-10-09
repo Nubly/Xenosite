@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  background-image: url(/tmp/apod.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
 }
 
 .App-logo {
@@ -9,19 +15,27 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 15s linear;
+    filter: drop-shadow(0 0 10px rgb(51, 255, 0));
   }
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(255, 255, 255);
+}
+
+.content {
+  text-shadow: 0 0 10px black;
+}
+
+.App-text {
+  border:rgb(0,0,0)
 }
 
 .App-link {

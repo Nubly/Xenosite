@@ -1,22 +1,64 @@
-import logo from './logo.svg';
+import logo from './logo.png';
+
 import './App.css';
+import { useState, useEffect } from 'react';
+
+function Clock(){
+  const [date, setDate] = useState(new Date());
+  
+  function refreshClock() {
+    setDate(new Date());
+  }
+  
+  useEffect(() => {
+      const timerId = setInterval(refreshClock, 1000);
+      return function cleanup() {
+        clearInterval(timerId);
+      };
+    }, []
+  );
+
+  return (
+    <span>
+      {date.toLocaleTimeString()}
+    </span>
+  );
+}
 
 function App() {
+
   return (
-    <div className="App">
+    <div
+    className="App"
+    >
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
+        <div className="content">
+          <img
+            src={logo}
+            className="App-logo"
+            alt="logo"
+            />
+          <br></br>
+          <p className="App-text">
+            Welcome to 51aliens.space.
+            We're excited to have you.
+          </p>
+          <p>
+            It is currently {Clock()}.
+          </p>
+          <br></br>
+          <a
           className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          href="https://grafana.51aliens.space">
+            Grafana
+          </a>
+          <br></br>
+          <a 
+          className="App-link"
+          href="https://51aliens.space/dynmap">
+            Dynmap
+          </a>
+        </div>
       </header>
     </div>
   );

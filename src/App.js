@@ -79,7 +79,7 @@ function App() {
           <br></br>
           <a 
           className="App-link"
-          href="https://plex.x51aliens.space">
+          href="https://plex.51aliens.space">
             Plex
           </a>
         </div>

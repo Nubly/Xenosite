@@ -58,6 +58,30 @@ function App() {
           href="https://51aliens.space/dynmap">
             Dynmap
           </a>
+          <br></br>
+          <a 
+          className="App-link"
+          href="https://gitlab.51aliens.space">
+            GitLab
+          </a>
+          <br></br>
+          <a 
+          className="App-link"
+          href="https://code.51aliens.space">
+            VSCode
+          </a>
+          <br></br>
+          <a 
+          className="App-link"
+          href="https://request.51aliens.space">
+            Overseerr
+          </a>
+          <br></br>
+          <a 
+          className="App-link"
+          href="https://plex.x51aliens.space">
+            Plex
+          </a>
         </div>
       </header>
     </div>
